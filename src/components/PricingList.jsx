@@ -29,8 +29,11 @@ const PricingList = () => {
           <Button
             className="w-full mb-6"
             href={
-              item.price ? "/pricing" : "mailto:thomasandromeda999@gmail.com"
+              item.price
+                ? "https://chatgpt.com/"
+                : "https://mail.google.com/mail/?view=cm&fs=1&to=thomasandromeda999@gmail.com"
             }
+            target
             white={!!item.price}
           >
             {item.price ? "Get started" : "Contact us"}

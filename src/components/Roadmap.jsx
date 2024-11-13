@@ -6,6 +6,13 @@ import { roadmap } from "../constants";
 import { check2, grid, loading1 } from "../assets";
 import { Gradient } from "./design/Roadmap";
 
+const scrollToRoadmap = () => {
+  const roadmapSection = document.getElementById("roadmap");
+  if (roadmapSection) {
+    roadmapSection.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
 const Roadmap = () => (
   <Section className="overflow-hidden" id="roadmap">
     <div className="container md:pb-10">
@@ -69,7 +76,7 @@ const Roadmap = () => (
       </div>
 
       <div className="flex justify-center mt-12 md:mt-15 xl:mt-20">
-        <Button href="/roadmap">Our roadmap</Button>
+        <Button onClick={scrollToRoadmap}>Our roadmap</Button>
       </div>
     </div>
   </Section>

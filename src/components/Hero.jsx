@@ -9,6 +9,14 @@ import Generating from "./Generating";
 import Notification from "./Notification";
 import CompanyLogos from "./CompanyLogos";
 
+const scrollToPricing = () => {
+  const pricingSection = document.getElementById("pricing");
+  if (pricingSection) {
+    pricingSection.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
+
 const Hero = () => {
   const parallaxRef = useRef(null);
 
@@ -42,7 +50,7 @@ const Hero = () => {
             Unleash the power of AI within Brainwave. Upgrade yout productivity
             with Brainwave, the open AI chat app
           </p>
-          <Button href="/pricing" white>
+          <Button onClick={scrollToPricing} white>
             Get Started
           </Button>
         </div>
