@@ -1,6 +1,3 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import ButtonGradient from "./assets/svg/ButtonGradient";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -10,22 +7,55 @@ import Services from "./components/Services";
 import Pricing from "./components/Pricing";
 import Roadmap from "./components/Roadmap";
 import Footer from "./components/Footer";
-
+import Login from "./components/Login";
+import { Routes, Route } from "react-router-dom";
+import Register from "./components/Register";
+import FooterLogin from "./components/FooterLogin";
 
 const App = () => {
   return (
     <>
-      <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
-        <Header/>
-        <Hero/>
-        <Benefits />
-        <Collaboration />
-        <Services/>
-        <Pricing />
-        <Roadmap />
-        <Footer/>
-      </div>
-      <ButtonGradient />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
+              <Header />
+              <Hero />
+              <Benefits />
+              <Collaboration />
+              <Services />
+              <Pricing />
+              <Roadmap />
+              <Footer />
+              <ButtonGradient />
+            </div>
+          }
+        />
+
+        <Route
+          path="/login"
+          element={
+            <div className="h-screen w-screen overflow-hidden">
+              <div className="pt-[0.75rem] lg:pt-[2.5rem] max-w-full max-h-full">
+                <Login />
+                <FooterLogin />
+              </div>
+            </div>
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <div className="h-screen w-screen overflow-hidden">
+              <div className="pt-[0.75rem] lg:pt-[2.5rem] max-w-full max-h-full">
+                <Register />
+                <FooterLogin />
+              </div>
+            </div>
+          }
+        />
+      </Routes>
     </>
   );
 };
