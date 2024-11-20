@@ -13,7 +13,7 @@ import Register from "./components/Register";
 import FooterLogin from "./components/FooterLogin";
 import SidebarAi from "./components/SidebarAi";
 import AiChat from "./components/AiChat";
-import { ContextProvider } from "./context/context";
+import ContextProvider from "./context/context";
 
 const App = () => {
   return (
