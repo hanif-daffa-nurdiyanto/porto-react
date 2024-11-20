@@ -11,6 +11,9 @@ import Login from "./components/Login";
 import { Routes, Route } from "react-router-dom";
 import Register from "./components/Register";
 import FooterLogin from "./components/FooterLogin";
+import SidebarAi from "./components/SidebarAi";
+import AiChat from "./components/AiChat";
+import ContextProvider, { Context } from "./context/context";
 
 const App = () => {
   return (
@@ -51,6 +54,19 @@ const App = () => {
               <div className="pt-[0.75rem] lg:pt-[2.5rem] max-w-full max-h-full">
                 <Register />
                 <FooterLogin />
+              </div>
+            </div>
+          }
+        />
+        <Route
+          path="/prompt"
+          element={
+            <div className="h-screen w-screen overflow-hidden">
+              <div className="flex max-w-full max-h-full">
+                <ContextProvider>
+                  <SidebarAi />
+                  <AiChat />
+                </ContextProvider>
               </div>
             </div>
           }

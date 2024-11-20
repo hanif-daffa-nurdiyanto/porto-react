@@ -30,10 +30,9 @@ const PricingList = () => {
             className="w-full mb-6"
             href={
               item.price
-                ? "https://chatgpt.com/"
+                ? "/prompt"
                 : "https://mail.google.com/mail/?view=cm&fs=1&to=thomasandromeda999@gmail.com"
             }
-            target
             white={!!item.price}
           >
             {item.price ? "Get started" : "Contact us"}
@@ -57,3 +56,11 @@ const PricingList = () => {
 };
 
 export default PricingList;
+<div className="mt-[50px] mb-[50px] mx-0 text-[56px] p-5 font-medium">
+  <p>
+    <span className="bg-gradient-to-r from-pink-500 to-orange-500 bg-clip-text text-transparent">
+      Hello
+    </span>
+  </p>
+  <p className="mt-8">How can i help you today</p>
+</div>;
