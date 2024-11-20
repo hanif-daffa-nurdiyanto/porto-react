@@ -11,7 +11,7 @@ import {
   User,
 } from "lucide-react";
 import { brainwave, brainwaveSymbol } from "../assets";
-import { Context } from "../context/context";
+import { Context } from "../context/Context";
 import { AnimatePresence, motion } from "framer-motion";
 
 const AiChat = () => {

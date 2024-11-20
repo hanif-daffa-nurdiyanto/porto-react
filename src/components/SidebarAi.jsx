@@ -9,7 +9,7 @@ import {
   Settings,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import { Context } from "../context/context";
+import { Context } from "../context/Context";
 
 const SidebarAi = () => {
   const [showMenu, setShowMenu] = useState(false);
